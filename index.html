@@ -5,7 +5,7 @@
     <title>Front End Assessment</title>
     <link rel="stylesheet" href="./styles/app.css">
 </head>
-<body>
+<body ng-controller="mainCtrl">
 <!--This div wraps the entire page-->
     <div class="site-wrapper">
         <!--Here is your header with the navigation nested inside -->
@@ -17,14 +17,17 @@
                             <a ui-sref="shop">Shop</a>
                         </li>
                         <li>
-                            <a>Blog</a>
+                            <a
+                            ui-sref="blog">Blog</a>
                         </li>
                         <li>
-                            <a>About</a>
+                            <a
+                            ui-sref="about">About</a>
                         </li>
                     </ul>
 
                 </nav>
+                <div ui-view></div>
                 <button class="hamburger toggle-nav js-toggle-nav" ng-click="showNav">
                     <span class="hamburger-box"><span class="hamburger-inner"></span>
                     </span>
@@ -42,6 +45,12 @@
 
 
 <!--ADD ALL YOUR SCRIPTS HERE -->
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+ <script src="./scripts/app.js"></script>
+ <script src="./scripts/mainCtrl.js"></script>
+ <script src="./scripts/mainService.js"></script>
+ <script src="./scripts/routes.js"></script>
+ <script src="./scripts/product.js"></script>
 </body>
 </html>
